@@ -1,0 +1,29 @@
+.container-footer{
+    margin-top: auto;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    /* background: lightgoldenrodyellow; */
+    background-color: #e9e9e9;
+    height: calc(30vh);
+    padding-top: 1rem;
+    border: 1px solid gray;
+}
+.section{
+    display:flex ;
+    flex-direction: column;
+    color:#012060;
+    gap: 0.4rem;
+
+}
+
+.text-orange{
+    color: #F99A0C;
+    font-size: x-large;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+    text-decoration: underline;
+}
+img{
+    width: 12rem;
+}

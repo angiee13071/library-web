@@ -1,0 +1,73 @@
+<div class="container-manage">
+    @if (manageProfile===true&&list===false){
+    <button (click)="booksView()">Libros ➩</button>
+    <button (click)="authorsView()">Autores ➩</button>
+    <button (click)="publishersView()">Editorial ⇐</button>
+    }
+    @if (back===true&&list===true){
+    @if (books===true){
+    <h2>LIST OF BOOKS</h2>
+    <button class="buttonGreen" (click)="addBook()">Añadir nuevo libro ✚</button>
+    <div *ngFor="let b of booksData" class="list-container">
+        <div class="card">
+            <img src="{{imageBook}}" alt="">
+            <div class="detail">
+                <h2>{{ b.title }}</h2>
+                <p>Año: {{ b.year }}</p>
+                <p>Páginas: {{ b.pages }}</p>
+                <p>Lenguaje: {{b.language}}</p>
+            </div>
+            <div class="buttons">
+                <button class="buttonGreen" (click)="updateBook()">Actualizar ✔</button>
+                <button class="buttonRed" (click)="deleteBook(b.id)">Eliminar ✘</button>
+                <button class="buttonRed" (click)="editBook(b.title,b.year,b.pages,b.language,b.publishers)">Editar
+                    ✎</button>
+            </div>
+        </div>
+    </div>
+    }
+    @if (authors===true){
+    <h2>LIST OF AUTHORS</h2>
+    <button class="buttonGreen">Añadir nuevo Autor ✚</button>
+    <div *ngFor="let a of authorsData" class="list-container">
+        <div class="card">
+            <img src="{{imageAuthor}}" alt="">
+            <div class="detail">
+                <h2>Autor: {{a.name}}</h2>
+                <p>Nacimiento: {{a.birth_date }}</p>
+                <p>Deceso: {{a.date_of_death }}</p>
+                <p>Ciudad: {{a.country}}</p>
+
+            </div>
+            <div class="buttons">
+                <button class="buttonGreen">Actualizar ✔</button>
+                <button class="buttonRed">Eliminar ✘</button>
+                <button class="buttonRed">Editar ✎</button>
+            </div>
+
+        </div>
+    </div>
+    }
+    @if (publishers===true){
+    <h2>LIST OF PUBLISHERS</h2>
+    <button class="buttonGreen">Añadir nueva editorial ✚</button>
+    <div *ngFor="let p of publishersData" class="list-container">
+        <div class="card">
+            <img src="{{imagePublishers}}" alt="">
+            <div class="detail">
+                <h2> {{ p.name }}</h2>
+                <p>País: {{ p.country }}</p>
+            </div>
+            <div class="buttons">
+                <button class="buttonGreen">Actualizar ✔</button>
+                <button class="buttonRed">Eliminar ✘</button>
+                <button class="buttonRed">Editar ✎</button>
+            </div>
+
+        </div>
+    </div>
+    }
+
+    <button (click)="backButton()">⇐ Atrás</button>
+    }
+</div>

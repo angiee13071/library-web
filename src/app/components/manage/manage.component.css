@@ -1,0 +1,43 @@
+.container-manage{
+height: auto;
+max-height: calc(80vh);
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+align-items: center;
+justify-content: center;
+padding-top: 10rem;
+
+}
+img{
+    height: 5rem;
+}
+.list-container{
+    background-color: rgb(246, 166, 134);
+    padding: .5rem;
+    border-radius: .3rem;
+    width: 50%;
+ height: auto;
+}
+.card{
+    background-color: rgb(229, 227, 227);
+    padding: 1rem;
+    border-radius: .3rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.buttons{
+    display: flex;
+    /* flex-direction: column; */
+    flex-direction: row;
+    gap: 1rem;
+}
+
+button{
+    background: #2a2a2a;
+    color: white;
+    padding: .5rem;
+    height: 2rem;
+}
